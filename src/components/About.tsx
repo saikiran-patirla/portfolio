@@ -11,6 +11,9 @@ import {
   CalendarIcon
 } from '@heroicons/react/24/outline';
 
+// Base path for production (GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
 export default function About() {
   const { personal, education } = portfolioData;
 
@@ -40,7 +43,7 @@ export default function About() {
               {/* Profile Image - Sharp */}
               <div className="h-44 w-44 overflow-hidden rounded-full border-4 border-cyan-500/30 shadow-xl shadow-cyan-500/10">
                 <Image
-                  src="/images/profile.jpg"
+                  src={`${basePath}/images/profile.jpg`}
                   alt="Sai Kiran Patirla"
                   width={176}
                   height={176}
@@ -93,24 +96,24 @@ export default function About() {
             
             {/* Info Grid */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {infoItems.map((item, index) => (
+              {infoItems.map((item, index) => (
                 <div 
-                key={index} 
-                className="flex items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-900/30 p-4"
+                  key={index} 
+                  className="flex items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-900/30 p-4"
                 >
-                <div className="shrink-0 rounded-lg bg-cyan-500/10 p-2">
+                  <div className="shrink-0 rounded-lg bg-cyan-500/10 p-2">
                     <item.icon className="h-4 w-4 text-cyan-500" />
-                </div>
-                <div className="min-w-0 flex-1">
+                  </div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-xs text-gray-500">{item.label}</p>
                     <p className={`font-medium text-white ${
-                    item.label === 'Email' ? 'text-[11.1px]' : 'text-xs'
+                      item.label === 'Email' ? 'text-[11.1px]' : 'text-xs'
                     }`}>
-                    {item.value}
+                      {item.value}
                     </p>
+                  </div>
                 </div>
-                </div>
-            ))}
+              ))}
             </div>
           </div>
         </div>
