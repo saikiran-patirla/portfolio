@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { portfolioData } from '@/data/portfolioData';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
+// Base path for production (GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
 export default function Hero() {
   const { personal } = portfolioData;
 
@@ -15,7 +18,7 @@ export default function Hero() {
         {/* RIGHT 50% – normal image */}
         <div className="absolute right-0 top-0 h-full w-1/2">
           <Image
-            src="/images/header-background.jpeg"
+            src={`${basePath}/images/header-background.jpeg`}
             alt="Background"
             fill
             className="object-cover"
@@ -28,7 +31,7 @@ export default function Hero() {
         {/* LEFT 50% – mirrored image */}
         <div className="absolute left-0 top-0 h-full w-1/2 scale-x-[-1]">
           <Image
-            src="/images/header-background.jpeg"
+            src={`${basePath}/images/header-background.jpeg`}
             alt="Background mirrored"
             fill
             className="object-cover"
@@ -40,7 +43,7 @@ export default function Hero() {
         {/* BOTTOM HALF REFLECTION (full width, subtle) */}
         <div className="absolute inset-x-0 bottom-0 h-1/2 scale-y-[-1] opacity-20">
           <Image
-            src="/images/header-background.jpeg"
+            src={`${basePath}/images/header-background.jpeg`}
             alt="Background reflection"
             fill
             className="object-cover"
@@ -65,7 +68,7 @@ export default function Hero() {
                 <div className="h-full w-full rounded-full bg-black p-1">
                   <div className="relative h-full w-full overflow-hidden rounded-full">
                     <Image
-                      src="/images/profile.jpg"
+                      src={`${basePath}/images/profile.jpg`}
                       alt="Sai Kiran Patirla"
                       width={200}
                       height={200}
@@ -129,35 +132,35 @@ export default function Hero() {
           </div>
 
           {/* CTA Buttons */}
-            <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
             <a
-                href="#projects"
-                className="group flex items-center gap-2 rounded-full bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:bg-cyan-400 hover:shadow-cyan-500/50"
+              href="#projects"
+              className="group flex items-center gap-2 rounded-full bg-cyan-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/30 transition-all hover:bg-cyan-400 hover:shadow-cyan-500/50"
             >
-                View My Work
-                <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              View My Work
+              <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
+              </svg>
             </a>
             <a
-                href="/resume.pdf"
-                download="SAIKIRANPATIRLA.pdf"
-                className="group flex items-center gap-2 rounded-full bg-gray-700 px-6 py-3 font-semibold text-white shadow-lg shadow-gray-500/30 transition-all hover:bg-gray-500 hover:shadow-gray-500/50"
+              href={`${basePath}/resume.pdf`}
+              download="SAIKIRANPATIRLA.pdf"
+              className="group flex items-center gap-2 rounded-full bg-gray-700 px-6 py-3 font-semibold text-white shadow-lg shadow-gray-500/30 transition-all hover:bg-gray-500 hover:shadow-gray-500/50"
             >
-                Download Resume
-                <svg className="h-5 w-5 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              Download Resume
+              <svg className="h-5 w-5 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                </svg>
+              </svg>
             </a>
             <a
-                href="#contact"
-                className="flex items-center gap-2 rounded-full border-2 border-white/50 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20"
+              href="#contact"
+              className="flex items-center gap-2 rounded-full border-2 border-white/50 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/20"
             >
-                Get In Touch
+              Get In Touch
             </a>
-            </div>
+          </div>
 
-          {/* ================= SOCIAL ICONS (VERBATIM) ================= */}
+          {/* ================= SOCIAL ICONS ================= */}
           <div className="flex items-center justify-center gap-4">
             {/* GitHub */}
             <a
