@@ -110,7 +110,7 @@ export default function Hero() {
                 I leverage <span className="font-semibold text-cyan-400">Data Analysis</span>,{' '}
                 <span className="font-semibold text-blue-400">Machine Learning</span>,{' '}
                 <span className="font-semibold text-indigo-400">Generative AI</span> and{' '}
-                <span className="font-semibold text-purple-400">AI Agents</span> to transform complex data into actionable insights
+                <span className="font-semibold text-purple-400">AI Agents</span> to solve complex business problems into tangible outcomes
               </p>
             </div>
           </div>
