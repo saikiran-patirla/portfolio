@@ -169,7 +169,7 @@ My experience spans designing AI-powered chatbots, building ETL pipelines, devel
         "User Interface: Display results in Streamlit dashboard"
       ],
       githubUrl: "https://github.com/saikiran-patirla/equity-research-ai-tool",
-      liveUrl: "https://equity-research-ai.streamlit.app"
+      liveUrl: "https://equity-research-ai-tool-by-sai-kiran.streamlit.app"
     },
     {
       title: "Dangerous Selfie Classification System",
