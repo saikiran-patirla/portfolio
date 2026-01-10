@@ -19,21 +19,21 @@ My experience spans designing AI-powered chatbots, building ETL pipelines, devel
 
   education: [
     {
-      degree: "Master of Science in Information Management",
+      degree: "MS in Information Management",
       institution: "University of Illinois Urbana-Champaign",
       duration: "Aug 2023 – Dec 2024",
       gpa: "3.75/4.0",
       description: "Focus on Data Science, Machine Learning, and AI applications in business systems."
     },
     {
-      degree: "Master of Business Administration in General Management",
+      degree: "MBA in General Management",
       institution: "Indian Institute of Technology Delhi",
       duration: "Sep 2020 – Apr 2022",
       gpa: "3.48/4.0",
       description: "Strategic management, business analytics, and technology leadership."
     },
     {
-      degree: "Bachelor of Technology in Computer Science & Engineering",
+      degree: "B.Tech in Computer Science & Engineering",
       institution: "National Institute of Technology Raipur",
       duration: "Aug 2014 – May 2018",
       gpa: "3.29/4.0",
