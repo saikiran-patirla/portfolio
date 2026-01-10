@@ -140,7 +140,7 @@ export default function About() {
                 </div>
                 
                 <h4 className="mb-2 font-bold text-white">
-                  {edu.degree.split(' in ')[0]}
+                  {edu.degree}
                 </h4>
                 <p className="mb-3 text-sm text-gray-400">
                   {edu.institution}
