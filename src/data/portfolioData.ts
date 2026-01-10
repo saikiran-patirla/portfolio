@@ -33,7 +33,7 @@ My experience spans designing AI-powered chatbots, building ETL pipelines, devel
       description: "Strategic management, business analytics, and technology leadership."
     },
     {
-      degree: "B.Tech in Computer Science & Engineering",
+      degree: "B.Tech in Computer Science",
       institution: "National Institute of Technology Raipur",
       duration: "Aug 2014 – May 2018",
       gpa: "3.29/4.0",
